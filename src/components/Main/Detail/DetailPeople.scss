@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+.detail_people {
+  margin: 2rem 7rem;
+  font-family: 'Poppins', 'sans-serif';
+
+  .detail_people_card {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    margin: 2rem 0 10rem 0;
+
+    .people_image {
+      grid-column: span 2 / span 2;
+
+      img {
+        height: 500px;
+        border-radius: 10px;
+      }
+    }
+
+    .people_content {
+      grid-column: span 5 / span 5;
+      position: relative;
+
+      h1 {
+        font-weight: 600;
+      }
+
+      p:nth-child(2) {
+        margin-top: 2rem;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      p:nth-child(3) {
+        margin-top: 1.5rem;
+        font-size: 14px;
+      }
+    }
+
+    .query_overlays {
+      background-color: red;
+      height: 300px;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      top: 400px;
+    }
+  }
+}

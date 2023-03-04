@@ -1,0 +1,157 @@
+@import 'breakpoint';
+
+.about_page {
+  transform: translateY(-21px);
+  background-color: #000d21;
+
+  @include mobile {
+    margin-top: 5rem;
+    background-color: #121420;
+  }
+
+  .about_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    padding: 5rem 0;
+
+    @include mobile {
+      display: block;
+      width: 100%;
+      padding: 2rem 0;
+    }
+
+    @include tablet {
+      display: block;
+    }
+
+    .about_image {
+      grid-column: span 1 / span 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 4rem;
+
+      @include mobile {
+        padding: 3rem 2rem;
+      }
+
+      img {
+        height: 340px;
+        width: 100%;
+
+        @include mobile {
+          height: 200px;
+          width: 100%;
+        }
+
+        @include tablet {
+          height: 300px;
+          width: fit-content;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .about_content {
+      grid-column: span 1 / span 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 6rem 0 6rem;
+
+      @include mobile {
+        margin: 0 2rem;
+      }
+
+      @include tablet {
+        margin: 4rem 6rem 0 6rem;
+      }
+
+      .title_app {
+        font-size: 20px;
+        font-weight: 700;
+        color: #f42272;
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      .title {
+        font-size: 40px;
+        font-weight: 700;
+        color: #a8dadc;
+
+        @include mobile {
+          font-size: 30px;
+          margin-top: 10px;
+        }
+
+        @include macbookAir {
+          font-size: 33px;
+          margin-top: 10px;
+        }
+      }
+
+      .description {
+        margin-top: 2rem;
+        margin-right: 4rem;
+        line-height: 1.625;
+
+        @include mobile {
+          margin-top: 1.5rem;
+          margin-right: 0rem;
+          font-size: 13px;
+        }
+
+        @include macbookAir {
+          margin-top: 1rem;
+          margin-right: 4rem;
+          line-height: 1.625;
+        }
+      }
+
+      .lists {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 2rem;
+
+        @include mobile {
+          font-size: 13px;
+        }
+
+        .left_list,
+        .right_list {
+          grid-column: span 1 / span 1;
+          font-weight: 700;
+
+          .check_icon {
+            margin-right: 10px;
+            color: #fed496;
+            transform: translateY(2px);
+
+            @include mobile {
+              margin-right: 10px;
+              color: #fed496;
+              transform: translateY(2px);
+              font-size: 12px;
+            }
+          }
+        }
+
+        .left_list p,
+        .right_list p {
+          margin-bottom: 10px;
+        }
+
+        .right_list {
+          @include mobile {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

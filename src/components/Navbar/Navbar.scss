@@ -1,0 +1,214 @@
+@import 'breakpoint';
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7rem;
+  color: #fff;
+  position: relative;
+
+  @include mobile {
+    padding: 20px 1rem;
+  }
+
+  @include tablet {
+    padding: 20px 3rem;
+  }
+
+  .nav_title h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .nav_menu {
+    @include mobile {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      gap: 80px;
+
+      li {
+        list-style: none;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        margin-top: 7px;
+        padding-bottom: 7px;
+        cursor: pointer;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background-color: red;
+          transition: width 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &.active {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+
+  .nav_search {
+    position: relative;
+
+    input {
+      padding: 10px 12px 10px 38px;
+      width: 250px;
+      border-radius: 30px;
+      background-color: #000814;
+      border: 2px solid #495057;
+      color: #fff;
+      transition: 0.3s;
+
+      &:focus {
+        outline: none;
+        border: 2px solid #6c757d;
+        transition: 0.3s;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    .search_icon {
+      font-size: 20px;
+      position: absolute;
+      left: 15px;
+      top: 11px;
+      font-size: 15px;
+      color: #adb5bd;
+    }
+  }
+
+  .hamburger {
+    display: none;
+
+    @include mobile {
+      display: block;
+      font-size: 25px;
+      transform: translateY(5px);
+    }
+
+    @include tablet {
+      display: block;
+      font-size: 25px;
+      transform: translateY(5px);
+    }
+  }
+}
+
+.dropdown {
+  background-color: #121420;
+  width: 100%;
+  padding: 20px 7rem;
+  position: absolute;
+  z-index: 10;
+
+  .genre_movies_title,
+  .genre_series_title {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    color: #f42272;
+  }
+
+  .genre_series_title {
+    margin-top: 3rem;
+  }
+
+  .movies_genre,
+  .series_genre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .genre {
+      padding-left: 50px;
+      padding-bottom: 10px;
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Dropdown */
+.transition-enter {
+  opacity: 0;
+}
+
+.transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+/* .transition-exit {
+  opacity: 1;
+}
+
+.transition-exit-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+} */
+
+@media screen and (max-width: 767px) {
+  nav {
+    padding: 20px 1rem;
+  }
+
+  .nav_menu,
+  .nav_search {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 25px;
+    transform: translateY(5px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    padding: 20px 3rem;
+  }
+
+  .nav_menu,
+  .nav_search {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 25px;
+    transform: translateY(5px);
+  }
+}

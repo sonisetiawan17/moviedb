@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+header {
+  font-family: 'Poppins', sans-serif;
+}
+
+section:nth-child(1) {
+  margin: 20px 0 20px 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.movies,
+.series {
+  margin: 20px 0 20px 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+section:nth-child(2),
+footer {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.scrollBtn {
+  position: fixed;
+  background-color: limegreen;
+  bottom: 15px;
+  right: 15px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  border: limegreen;
+}
+
+.onTopIcon {
+  transform: translateY(5px);
+}

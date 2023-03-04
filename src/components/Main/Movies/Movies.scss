@@ -1,0 +1,143 @@
+@import 'breakpoint';
+
+.movies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.5rem 0 3.5rem;
+
+  @include mobile {
+    padding: 0 1rem 0 1rem;
+  }
+
+  @include macbookAir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 3.5rem 0 3.5rem;
+  }
+
+  .movie_title {
+    font-size: 20px;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: 17px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    .movie_link {
+      @include mobile {
+        font-size: 13px;
+      }
+
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+
+      &:hover {
+        color: red;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0 1rem 0;
+
+  @include mobile {
+    margin: 1rem 0 1rem 0;
+    display: none;
+  }
+
+  @include tablet {
+    margin: 1rem 0 1rem 0;
+    display: none;
+  }
+
+  @include macbookAir {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .card_content {
+    width: 11%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 250px;
+
+    @include mobile {
+      width: 30%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      height: 210px;
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      transition: 0.4s;
+      overflow: hidden;
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+// Mobile
+
+.card_mobile {
+  display: none;
+
+  @mixin mobile-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1rem;
+  }
+
+  @include mobile {
+    @include mobile-tablet;
+  }
+
+  @include tablet {
+    @include mobile-tablet;
+    margin: 0 3rem;
+  }
+
+  .card_content_mobile {
+    img {
+      transition: 0.4s;
+      height: 150px;
+      border-radius: 5px;
+
+      @include mobile-428 {
+        height: 170px;
+      }
+
+      @include mobile-414 {
+        height: 160px;
+      }
+
+      @include mobile-390 {
+        height: 130px;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}

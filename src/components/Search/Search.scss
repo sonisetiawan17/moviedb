@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+.query_result {
+  margin: 2rem 7rem;
+  font-family: 'Quicksand', 'sans-serif';
+
+  .query_card {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    margin: 2rem 0 1rem 0;
+    background-color: #000c1d;
+    border-radius: 10px;
+
+    .query_image {
+      grid-column: span 1 / span 1;
+      height: 250px;
+
+      img {
+        height: 250px;
+      }
+    }
+
+    .query_content {
+      grid-column: span 6 / span 6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 1rem;
+
+      p:nth-child(2) {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      p:nth-child(3) {
+        margin: 2rem 9rem 0 0;
+      }
+    }
+  }
+}

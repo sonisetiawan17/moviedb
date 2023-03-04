@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+.popular_people {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  padding: 3rem 4.5rem 2rem 4.5rem;
+}
+
+.people_profile {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+
+  .people {
+    position: relative;
+
+    img {
+      height: 300px;
+      width: 250px;
+      object-fit: cover;
+    }
+
+    .people_name {
+      position: absolute;
+      background-color: #ffffffb9;
+      bottom: 3.9px;
+      padding: 5px 5px;
+      text-align: center;
+      width: 100%;
+
+      p:nth-child(1) {
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+      }
+
+      p:nth-child(2) {
+        font-size: 13px;
+      }
+    }
+  }
+}

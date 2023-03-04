@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@import 'breakpoint';
+
+.hero_section {
+  width: 100%;
+  height: 530px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+
+  @include mobile {
+    height: 380px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 530px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @include mobile {
+      height: 380px;
+    }
+  }
+
+  video {
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+
+    @include mobile {
+      height: 380px;
+    }
+  }
+
+  .content {
+    position: absolute;
+    width: 40%;
+    margin: 0 7rem;
+    height: 530px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mobile {
+      width: 80%;
+      margin: 0 30px;
+      height: 380px;
+    }
+
+    @include tablet {
+      margin: 0 3rem;
+      width: 80%;
+    }
+
+    @include macbookAir {
+      width: 45%;
+    }
+
+    h2:nth-child(1) {
+      color: red;
+      font-size: 20px;
+
+      @include mobile {
+        font-size: 13px;
+      }
+
+      @include macbookAir {
+        font-size: 19px;
+      }
+    }
+
+    h2:nth-child(2) {
+      font-size: 45px;
+
+      @include mobile {
+        font-size: 25px;
+      }
+
+      @include macbookAir {
+        font-size: 41px;
+      }
+    }
+
+    .play_icon {
+      font-size: 17px;
+      transform: translateY(1px);
+      margin-right: 5px;
+      color: red;
+
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+
+    .information {
+      display: flex;
+      gap: 15px;
+      margin-top: -15px;
+      align-items: center;
+
+      p:nth-child(1),
+      p:nth-child(2) {
+        font-size: 11px;
+
+        @include mobile {
+          font-size: 9px;
+        }
+      }
+
+      p:nth-child(1) {
+        color: limegreen;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+
+      p:nth-child(2) {
+        color: #f42272;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transform: translateY(1px);
+      }
+    }
+
+    p {
+      margin-top: 1.2rem;
+      font-size: 13px;
+      color: #dee2e6;
+
+      @include mobile {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .hero_section_detail {
+    width: 100%;
+    background-color: red;
+    transform: translateY(-6px);
+    padding: 10px 0;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.05em;
+
+    @include mobile {
+      font-size: 11px;
+      padding: 1rem 1rem;
+      text-align: center;
+    }
+
+    span {
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}

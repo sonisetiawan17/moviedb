@@ -1,0 +1,55 @@
+// Breakpoints
+
+$mobile: 767px;
+$mobile-414: 414px;
+$mobile-428: 428px;
+$mobile-390: 390px;
+$mobile-400: 400px;
+
+$macbookAir-min: 1024px;
+$macbookAir-max: 1280px;
+
+$tablet-min: 768px;
+$tablet-max: 1023px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-428 {
+  @media (min-width: $mobile-428) {
+    @content;
+  }
+}
+
+@mixin mobile-414 {
+  @media (min-width: $mobile-414) {
+    @content;
+  }
+}
+
+@mixin mobile-390 {
+  @media (max-width: $mobile-390) {
+    @content;
+  }
+}
+
+@mixin mobile-400 {
+  @media (max-width: $mobile-400) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+@mixin macbookAir {
+  @media screen and (min-width: $macbookAir-min) and (max-width: $macbookAir-max) {
+    @content;
+  }
+}

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@import 'breakpoint';
+
+.movies_section {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  font-family: 'Poppins', sans-serif;
+
+  @include mobile {
+    display: block;
+  }
+
+  .movies_section_image {
+    grid-column: span 1 / span 1;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 620px;
+
+      @include mobile {
+        height: 450px;
+      }
+
+      @include tablet {
+        height: 550px;
+      }
+
+      @include macbookAir {
+        height: 600px;
+      }
+    }
+  }
+
+  .movies_section_content {
+    grid-column: span 1 / span 1;
+    height: 620px;
+    margin: 0 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mobile {
+      display: block;
+      margin: 1rem 1.5rem 3rem 1.5rem;
+      height: fit-content;
+    }
+
+    @include tablet {
+      height: 550px;
+      margin: 0 2rem;
+    }
+
+    @include macbookAir {
+      height: 600px;
+      margin: 0 5rem;
+    }
+
+    h3 {
+      color: #61615f;
+
+      @include mobile {
+        font-size: 15px;
+      }
+
+      @include tablet {
+        font-size: 15px;
+      }
+    }
+
+    h1 {
+      font-size: 35px;
+      letter-spacing: 0.025em;
+
+      @include mobile {
+        font-size: 25px;
+      }
+
+      @include tablet {
+        font-size: 25px;
+      }
+
+      @include macbookAir {
+        font-size: 30px;
+      }
+
+      span {
+        color: #f42272;
+      }
+    }
+
+    p {
+      margin-top: 2.5rem;
+      color: #c5c5c5;
+
+      @include mobile {
+        margin-top: 1rem;
+        font-size: 14px;
+      }
+
+      @include tablet {
+        font-size: 14px;
+        margin-top: 1rem;
+      }
+
+      @include macbookAir {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .movies_section_data {
+    display: flex;
+    justify-content: space-between;
+
+    .movie_data,
+    .genre_data,
+    .upcoming_data {
+      font-size: 35px;
+      font-weight: 600;
+
+      @include mobile {
+        font-size: 28px;
+      }
+
+      @include tablet {
+        font-size: 28px;
+      }
+    }
+
+    .movie_data {
+      color: #fef3cc;
+    }
+
+    .genre_data {
+      color: #8ecae6;
+    }
+
+    .upcoming_data {
+      color: #80ed99;
+    }
+
+    .description {
+      display: block;
+      font-size: 13px;
+
+      @include mobile {
+        font-size: 11px;
+      }
+
+      @include tablet {
+        font-size: 11px;
+      }
+    }
+  }
+}
